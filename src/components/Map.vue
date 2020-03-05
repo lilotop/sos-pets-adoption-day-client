@@ -22,6 +22,9 @@
                     [1,2,3],
                 ]
             }
+        },
+        mounted() {
+            this.$el.querySelector('.entry').scrollIntoView({behavior: "smooth", block: "end", inline: "nearest"});
         }
     }
 </script>
@@ -37,11 +40,12 @@
             justify-content: space-around;
         }
         .map__marker {
-            height: 10vh;
+            height: 30vw;
             width: 30vw;
             border: 1px solid #ccc;
-            margin: 0.3vh 1vw;
-            border-radius: 10px;
+            margin: 1vw;
+            border-radius: 50%;
+            font-size: 30px;
             display: flex;
             justify-content: center;
             align-items: center;
