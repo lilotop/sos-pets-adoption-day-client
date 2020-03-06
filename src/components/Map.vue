@@ -10,7 +10,7 @@
         <div class="entry">רחבת כניסה</div>
         <q-dialog v-model="dialogOpen" v-if="dialogOpen">
             <q-card>
-                <img :src="`/images/${selectedSpot.dog.id}.jpg`"/>
+                <img :src="`./images/${selectedSpot.dog.id}.jpg`" v-if="selectedSpot.dog.id"/>
                 <q-card-section>
                     <div :class="getGenderClass(selectedSpot.dog)" class="dog-name ellipsis">{{selectedSpot.dog.name}}</div>
                     <div>{{selectedSpot.dog.desc}}</div>
