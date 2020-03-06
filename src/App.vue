@@ -2,15 +2,6 @@
     <q-layout view="lHh Lpr lFf">
         <q-header elevated class="glossy">
             <q-toolbar>
-                <q-btn
-                        flat
-                        dense
-                        round
-                        @click="navDrawerOpen = !navDrawerOpen"
-                        aria-label="Menu"
-                        icon="menu"
-                />
-
                 <q-toolbar-title>
                     מפת יום אימוץ - שבת 7/3
                 </q-toolbar-title>
@@ -26,7 +17,7 @@
                     narrow-indicator
             >
               <q-tab name="map" label="מפה"/>
-              <q-tab name="dogs" label="כלבים"/>
+              <q-tab name="dogs" label="כלבים" disable/>
             </q-tabs>
           </q-toolbar>
         </q-header>
@@ -60,6 +51,7 @@
                 navDrawerOpen: false,
                 tab: 'map',
               adminDialog: false,
+                adminCode: '',
             }
         },
       methods: {
