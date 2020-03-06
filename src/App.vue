@@ -12,11 +12,11 @@
                 />
 
                 <q-toolbar-title>
-                    מפת יום אימוץ - הרצליה - שבת 7/3
+                    מפת יום אימוץ - שבת 7/3
                 </q-toolbar-title>
 
-                <q-space/>
-              <q-icon name="person" @mousedown="adminClick(true)" @mouseup="adminClick()"/>
+
+              <q-icon name="person" @click="adminDialog = !adminDialog"/>
             </q-toolbar>
 
           <q-toolbar>
@@ -40,9 +40,9 @@
               <q-card-section>
                 <q-input outlined v-model="adminCode" type="password" label="הכנס קוד מנהל" />
               </q-card-section>
-              <q-card-section>
+              <q-card-actions>
                 <q-btn color="primary" label="כנס" /> <q-btn label="בטל" v-close-popup/>
-              </q-card-section>
+              </q-card-actions>
             </q-card>
           </q-dialog>
             <router-view/>
@@ -60,21 +60,9 @@
                 navDrawerOpen: false,
                 tab: 'map',
               adminDialog: false,
-              adminCode: ''
             }
         },
       methods: {
-          adminClick(down) {
-            if(down) {
-
-              this.adminClickStartTime = Date.now();
-            } else {
-              if(Date.now() - this.adminClickStartTime > 1000) {
-                this.adminDialog = true;
-              }
-
-            }
-          }
       }
     }
 </script>

@@ -13,19 +13,22 @@
         data() {
             return {
                 mapData: [
-                    [16,17,18],
-                    [14,15],
-                    [11,12,13],
-                    [9,10],
-                    [6,7,8],
-                    [4,5],
-                    [1,2,3],
+                    [16, 17, 18],
+                    [14, 15],
+                    [11, 12, 13],
+                    [9, 10],
+                    [6, 7, 8],
+                    [4, 5],
+                    [1, 2, 3],
                 ]
             }
         },
         mounted() {
-            this.$el.querySelector('.entry').scrollIntoView({behavior: "smooth", block: "end", inline: "nearest"});
+            setTimeout(() => {
+                this.$el.querySelector('.entry').scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" });
+            }, 1000);
         }
+
     }
 </script>
 
@@ -35,10 +38,12 @@
         height: 100%;
         display: flex;
         flex-direction: column;
+
         .map__line {
             display: flex;
             justify-content: space-around;
         }
+
         .map__marker {
             height: 30vw;
             width: 30vw;
@@ -50,14 +55,17 @@
             justify-content: center;
             align-items: center;
             background-color: white;
+
             &:active {
                 background-color: #888;
 
             }
+
             &:focus {
                 outline: none;
             }
         }
+
         .entry {
             font-size: 8vh;
             text-align: center;
