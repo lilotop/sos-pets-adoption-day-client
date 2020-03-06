@@ -60,6 +60,7 @@
         }
         .entry {
             font-size: 8vh;
+            text-align: center;
         }
     }
 </style>
