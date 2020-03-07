@@ -50,7 +50,7 @@
                     case "m":
                         return 'male text-h6';
                     default:
-                        return 'empty text-italic';
+                        return 'empty';
                 }
             }
         },
@@ -107,6 +107,34 @@
                         gender: 'm',
                         age: '1-2 ש',
                         desc: 'הגיע מהסגר בערד'
+                    },
+                    6: {
+                        id: 3333,
+                        name: 'ביאטריס',
+                        gender: 'f',
+                        age: '2ש',
+                        desc: 'אוהבת טיולים וילדים'
+                    },
+                    7: {
+                        id: 4444,
+                        name: 'סאני',
+                        gender: 'm',
+                        age: '4ש',
+                        desc: 'שקט ומחונך. מעולה לבית עם ילדים.'
+                    },
+                    9: {
+                        id: 3333,
+                        name: 'טובי',
+                        gender: 'f',
+                        age: 'שנה+',
+                        desc: 'אוהבת טיולים וילדים'
+                    },
+                    10: {
+                        id: 4444,
+                        name: 'מייקי',
+                        gender: 'm',
+                        age: '5-6ש',
+                        desc: 'שקט ומחונך. מעולה לבית עם ילדים.'
                     },
 
                 }
